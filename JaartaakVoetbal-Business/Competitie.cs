@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace JaartaakVoetbal_Business
 {
-    public class Klassement
+    public class Competitie
     {
-
-        //hier komen je private fields
 
     }
 }
