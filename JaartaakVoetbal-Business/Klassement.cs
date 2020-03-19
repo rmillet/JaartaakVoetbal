@@ -8,5 +8,8 @@ namespace JaartaakVoetbal_Business
 {
     public class Klassement
     {
+
+        //hier komen je private fields
+
     }
 }
