@@ -22,7 +22,7 @@ namespace JaartaakVoetbal_Business
 
         public void addMatch (Match match)
         {
-            // code schrijven om een match toet te voegen aan de lijst
+            // code schrijven om een match toe te voegen aan de lijst
 
         }
 
