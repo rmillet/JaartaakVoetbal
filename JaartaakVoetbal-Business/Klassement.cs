@@ -10,6 +10,6 @@ namespace JaartaakVoetbal_Business
     {
 
         //hier komen je private fields
-
+        
     }
 }
