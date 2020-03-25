@@ -24,5 +24,30 @@ namespace JaartaakVoetbal_Business
             return _thuisPloeg + " - " + _bezoekersPloeg + " (" + _thuisScore.ToString() + "-" + _bezoekersScore.ToString() + ")";
         }
 
+        public Match()
+        {
+            _thuisPloeg = "";
+            _bezoekersPloeg = "";
+            _thuisScore = 0;
+            _bezoekersScore = 0;
+            _speeldag = DateTime.Today;
+        }
+
+        public Match (string thuisploeg, string bezoekersploeg, int thuisScore, int bezoekersScore, DateTime speeldag)
+        {
+            _thuisPloeg = thuisploeg;
+            _bezoekersPloeg = bezoekersploeg;
+            _thuisScore = thuisScore;
+            _bezoekersScore = bezoekersScore;
+            _speeldag = speeldag;
+        }
+
+        public string Thuisploeg
+        {
+            get { return _thuisPloeg; }
+            set { _thuisPloeg = value; }
+        }
+
+
     }
 }
