@@ -48,6 +48,29 @@ namespace JaartaakVoetbal_Business
             set { _thuisPloeg = value; }
         }
 
+        public string BezoekersPloeg
+        {
+            get { return _bezoekersPloeg; }
+            set { _bezoekersPloeg = value; }
+        }
+
+        public int ThuisScore
+        {
+            get { return _thuisScore; }
+            set { _thuisScore = value; }
+        }
+
+        public int BezoekersScore
+        {
+            get { return _bezoekersScore; }
+            set { _bezoekersScore = value; }
+        }
+
+        public DateTime Speeldag
+        {
+            get { return _speeldag; }
+            set { _speeldag = value; }
+        }
 
     }
 }
