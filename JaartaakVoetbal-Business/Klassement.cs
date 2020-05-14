@@ -23,6 +23,7 @@ namespace JaartaakVoetbal_Business
         public void addMatch (Match match)
         {
             // code schrijven om een match toe te voegen aan de lijst
+			_matchen.Add(match);
 
         }
 
@@ -32,6 +33,12 @@ namespace JaartaakVoetbal_Business
 
             // code schrijft om alle matchen die voldoet aan de ploegnaam toe te voegen aan die lijst
             // zie cursus p.142
+			string uitvoer = " ";
+			foreach (Match m in _matchen)
+			{
+				temp = Match;
+			}
+			
 
             return temp;
         }
