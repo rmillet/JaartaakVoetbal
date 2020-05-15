@@ -10,19 +10,22 @@ namespace JaartaakVoetbal_Business
     {
         private List<string> _ploegen;
 
+        // een constructor aanmaken
+        public Ploegenlijst()
+        {
+            _ploegen = new List<string>();
+        }
+
         // terug een RO eigenschap aanmaken voor dit veld
-		 public List<Match> Ploegen
+        public List<string> Ploegen
         {
             get { return _ploegen; }
         }
 
-        // een constructor aanmaken
-		public Ploegenlijst()
-        {
-            _ploegen = new List<Ploegenlijst>();
-        }
-
         // een mogelijkheid om een ploeg toe te voegen aan de lijst
-		_ploegen.Add(Ploegenlijst);
+        public void addPloeg(string ploeg)
+        {
+            _ploegen.Add(ploeg);
+        }
     }
 }
