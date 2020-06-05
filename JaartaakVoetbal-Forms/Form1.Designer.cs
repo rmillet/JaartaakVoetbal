@@ -207,23 +207,6 @@
 			// lbxBezoekers
 			// 
 			this.lbxBezoekers.FormattingEnabled = true;
-			this.lbxBezoekers.Items.AddRange(new object[] {
-            "Club Brugge",
-            "KAA Gent",
-            "Charleroi",
-            "Antwerp",
-            "Standard",
-            "KV Mechelen",
-            "KRC Genk",
-            "Anderlecht",
-            "Zulte Waregem",
-            "Excel Moeskroen",
-            "KV Kortrijk",
-            "STVV",
-            "KAS Eupen",
-            "Cercle Brugge",
-            "KV Oostende",
-            "Waasland-Beveren"});
 			this.lbxBezoekers.Location = new System.Drawing.Point(385, 12);
 			this.lbxBezoekers.Name = "lbxBezoekers";
 			this.lbxBezoekers.Size = new System.Drawing.Size(224, 82);
