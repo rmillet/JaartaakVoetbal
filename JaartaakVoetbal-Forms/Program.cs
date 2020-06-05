@@ -9,7 +9,6 @@ namespace JaartaakVoetbal_Forms
 {
     static class Program
     {
-		Ploegenlijst jupilerproleague = new Ploegenlijst();
 		
         /// <summary>
         /// The main entry point for the application.
@@ -22,11 +21,7 @@ namespace JaartaakVoetbal_Forms
             Application.Run(new Form1());
         }
 
-		lboThuisPloeg.DataSource = _ploegenlijst.Ploegen;
-		lboBezoekrsPloeg.BindingContext=new BindingContext();
-		lboBezoekersPloeg.DataSource=_ploegenlijstt.Ploegen;
-		cboPloegen.BindingContext = new BindingContext();
-		cboPloegen.DataSource=_ploegenlijst.Ploegen;
+		
 
 		
     }

@@ -38,14 +38,18 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.lbxOverzichtP = new System.Windows.Forms.ListBox();
 			this.lbxThuisploeg = new System.Windows.Forms.ListBox();
-			this.ScoreUit = new System.Windows.Forms.TextBox();
-			this.ScoreThuis = new System.Windows.Forms.TextBox();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.listBox4 = new System.Windows.Forms.ListBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.TxtScoreUit = new System.Windows.Forms.TextBox();
+			this.TxtScoreThuis = new System.Windows.Forms.TextBox();
+			this.dtpSpeeldag = new System.Windows.Forms.DateTimePicker();
+			this.lbxOverzichtM = new System.Windows.Forms.ListBox();
+			this.cboploegen = new System.Windows.Forms.ComboBox();
 			this.lbxBezoekers = new System.Windows.Forms.ListBox();
+			this.lblAantPunten = new System.Windows.Forms.Label();
+			this.lblAantGew = new System.Windows.Forms.Label();
+			this.lblAantGel = new System.Windows.Forms.Label();
+			this.lblAantVerl = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// lblPloeg
@@ -103,6 +107,7 @@
 			this.btnmatch.TabIndex = 5;
 			this.btnmatch.Text = "VOEG MATCH TOE";
 			this.btnmatch.UseVisualStyleBackColor = true;
+			this.btnmatch.Click += new System.EventHandler(this.btnmatch_Click);
 			// 
 			// label1
 			// 
@@ -144,75 +149,60 @@
 			this.label7.TabIndex = 9;
 			this.label7.Text = "Aantal verloren: ";
 			// 
-			// listBox1
+			// lbxOverzichtP
 			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.Location = new System.Drawing.Point(93, 343);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(513, 95);
-			this.listBox1.TabIndex = 10;
+			this.lbxOverzichtP.FormattingEnabled = true;
+			this.lbxOverzichtP.Location = new System.Drawing.Point(93, 343);
+			this.lbxOverzichtP.Name = "lbxOverzichtP";
+			this.lbxOverzichtP.Size = new System.Drawing.Size(513, 95);
+			this.lbxOverzichtP.TabIndex = 10;
 			// 
 			// lbxThuisploeg
 			// 
 			this.lbxThuisploeg.FormattingEnabled = true;
-			this.lbxThuisploeg.Items.AddRange(new object[] {
-            "Club Brugge",
-            "KAA Gent",
-            "Charleroi",
-            "Antwerp",
-            "Standard",
-            "KV Mechelen",
-            "KRC Genk",
-            "Anderlecht",
-            "Zulte Waregem",
-            "Excel Moeskroen",
-            "KV Kortrijk",
-            "STVV",
-            "KAS Eupen",
-            "Cercle Brugge",
-            "KV Oostende",
-            "Waasland-Beveren"});
 			this.lbxThuisploeg.Location = new System.Drawing.Point(129, 12);
 			this.lbxThuisploeg.Name = "lbxThuisploeg";
 			this.lbxThuisploeg.Size = new System.Drawing.Size(224, 82);
 			this.lbxThuisploeg.TabIndex = 11;
+			this.lbxThuisploeg.SelectedIndexChanged += new System.EventHandler(this.lbxThuisploeg_SelectedIndexChanged);
 			// 
-			// ScoreUit
+			// TxtScoreUit
 			// 
-			this.ScoreUit.Location = new System.Drawing.Point(385, 114);
-			this.ScoreUit.Name = "ScoreUit";
-			this.ScoreUit.Size = new System.Drawing.Size(224, 20);
-			this.ScoreUit.TabIndex = 13;
+			this.TxtScoreUit.Location = new System.Drawing.Point(385, 114);
+			this.TxtScoreUit.Name = "TxtScoreUit";
+			this.TxtScoreUit.Size = new System.Drawing.Size(224, 20);
+			this.TxtScoreUit.TabIndex = 13;
 			// 
-			// ScoreThuis
+			// TxtScoreThuis
 			// 
-			this.ScoreThuis.Location = new System.Drawing.Point(129, 114);
-			this.ScoreThuis.Name = "ScoreThuis";
-			this.ScoreThuis.Size = new System.Drawing.Size(224, 20);
-			this.ScoreThuis.TabIndex = 14;
+			this.TxtScoreThuis.Location = new System.Drawing.Point(129, 114);
+			this.TxtScoreThuis.Name = "TxtScoreThuis";
+			this.TxtScoreThuis.Size = new System.Drawing.Size(224, 20);
+			this.TxtScoreThuis.TabIndex = 14;
 			// 
-			// dateTimePicker1
+			// dtpSpeeldag
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(129, 145);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(479, 20);
-			this.dateTimePicker1.TabIndex = 15;
+			this.dtpSpeeldag.Location = new System.Drawing.Point(129, 145);
+			this.dtpSpeeldag.Name = "dtpSpeeldag";
+			this.dtpSpeeldag.Size = new System.Drawing.Size(479, 20);
+			this.dtpSpeeldag.TabIndex = 15;
 			// 
-			// listBox4
+			// lbxOverzichtM
 			// 
-			this.listBox4.FormattingEnabled = true;
-			this.listBox4.Location = new System.Drawing.Point(93, 197);
-			this.listBox4.Name = "listBox4";
-			this.listBox4.Size = new System.Drawing.Size(516, 95);
-			this.listBox4.TabIndex = 16;
+			this.lbxOverzichtM.FormattingEnabled = true;
+			this.lbxOverzichtM.Location = new System.Drawing.Point(93, 197);
+			this.lbxOverzichtM.Name = "lbxOverzichtM";
+			this.lbxOverzichtM.Size = new System.Drawing.Size(516, 95);
+			this.lbxOverzichtM.TabIndex = 16;
 			// 
-			// comboBox1
+			// cboploegen
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(93, 316);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(512, 21);
-			this.comboBox1.TabIndex = 17;
+			this.cboploegen.FormattingEnabled = true;
+			this.cboploegen.Location = new System.Drawing.Point(93, 316);
+			this.cboploegen.Name = "cboploegen";
+			this.cboploegen.Size = new System.Drawing.Size(512, 21);
+			this.cboploegen.TabIndex = 17;
+			this.cboploegen.SelectedIndexChanged += new System.EventHandler(this.cboploegen_SelectedIndexChanged);
 			// 
 			// lbxBezoekers
 			// 
@@ -239,19 +229,55 @@
 			this.lbxBezoekers.Size = new System.Drawing.Size(224, 82);
 			this.lbxBezoekers.TabIndex = 18;
 			// 
+			// lblAantPunten
+			// 
+			this.lblAantPunten.AutoSize = true;
+			this.lblAantPunten.Location = new System.Drawing.Point(740, 304);
+			this.lblAantPunten.Name = "lblAantPunten";
+			this.lblAantPunten.Size = new System.Drawing.Size(0, 13);
+			this.lblAantPunten.TabIndex = 19;
+			// 
+			// lblAantGew
+			// 
+			this.lblAantGew.AutoSize = true;
+			this.lblAantGew.Location = new System.Drawing.Point(740, 331);
+			this.lblAantGew.Name = "lblAantGew";
+			this.lblAantGew.Size = new System.Drawing.Size(0, 13);
+			this.lblAantGew.TabIndex = 20;
+			// 
+			// lblAantGel
+			// 
+			this.lblAantGel.AutoSize = true;
+			this.lblAantGel.Location = new System.Drawing.Point(740, 362);
+			this.lblAantGel.Name = "lblAantGel";
+			this.lblAantGel.Size = new System.Drawing.Size(0, 13);
+			this.lblAantGel.TabIndex = 21;
+			// 
+			// lblAantVerl
+			// 
+			this.lblAantVerl.AutoSize = true;
+			this.lblAantVerl.Location = new System.Drawing.Point(740, 390);
+			this.lblAantVerl.Name = "lblAantVerl";
+			this.lblAantVerl.Size = new System.Drawing.Size(0, 13);
+			this.lblAantVerl.TabIndex = 22;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.lblAantVerl);
+			this.Controls.Add(this.lblAantGel);
+			this.Controls.Add(this.lblAantGew);
+			this.Controls.Add(this.lblAantPunten);
 			this.Controls.Add(this.lbxBezoekers);
-			this.Controls.Add(this.comboBox1);
-			this.Controls.Add(this.listBox4);
-			this.Controls.Add(this.dateTimePicker1);
-			this.Controls.Add(this.ScoreThuis);
-			this.Controls.Add(this.ScoreUit);
+			this.Controls.Add(this.cboploegen);
+			this.Controls.Add(this.lbxOverzichtM);
+			this.Controls.Add(this.dtpSpeeldag);
+			this.Controls.Add(this.TxtScoreThuis);
+			this.Controls.Add(this.TxtScoreUit);
 			this.Controls.Add(this.lbxThuisploeg);
-			this.Controls.Add(this.listBox1);
+			this.Controls.Add(this.lbxOverzichtP);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label3);
@@ -282,14 +308,18 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.ListBox lbxOverzichtP;
 		private System.Windows.Forms.ListBox lbxThuisploeg;
-		private System.Windows.Forms.TextBox ScoreUit;
-		private System.Windows.Forms.TextBox ScoreThuis;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private System.Windows.Forms.ListBox listBox4;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.TextBox TxtScoreUit;
+		private System.Windows.Forms.TextBox TxtScoreThuis;
+		private System.Windows.Forms.DateTimePicker dtpSpeeldag;
+		private System.Windows.Forms.ListBox lbxOverzichtM;
+		private System.Windows.Forms.ComboBox cboploegen;
 		private System.Windows.Forms.ListBox lbxBezoekers;
+		private System.Windows.Forms.Label lblAantPunten;
+		private System.Windows.Forms.Label lblAantGew;
+		private System.Windows.Forms.Label lblAantGel;
+		private System.Windows.Forms.Label lblAantVerl;
 	}
 }
 
